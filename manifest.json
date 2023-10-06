@@ -20,7 +20,8 @@
     {
       "src": "assets/img/playstore.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     },
     {
       "src": "assets/img/appstore.png",
