@@ -1,14 +1,17 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "transparent",
   "description": ".",
   "dir": "ltr",
+  "lang": "pt-br",
   "display": "standalone",
   "name": "Football Arretado",
   "orientation": "any",
   "scope": "/",
-  "short_name": "Football",
-  "start_url": "/",
-  "theme_color": "#ffffff",
+  "short_name": "Football Arretado",
+  "start_url": "https://rodrigonasciimento.github.io/football_arretado/",
+  "theme_color": "transparent",
+  "related_applications": [],
+  "prefer_related_applications": false,
   "categories": [],
   "screenshots": [],
   "icons": [
@@ -120,5 +123,6 @@
       "sizes": "1024x1024"
     }
   ],
+  "url": "https://rodrigonasciimento.github.io/football_arretado/",
   "shortcuts": []
 }
