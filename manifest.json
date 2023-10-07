@@ -8,7 +8,7 @@
   "orientation": "any",
   "scope": "/",
   "short_name": "Football Arretado",
-  "start_url": "https://rodrigonasciimento.github.io/football_arretado/",
+  "start_url": "/index.html",
   "theme_color": "transparent",
   "related_applications": [],
   "prefer_related_applications": false,
@@ -123,6 +123,6 @@
       "sizes": "1024x1024"
     }
   ],
-  "url": "https://rodrigonasciimento.github.io/football_arretado/",
+  "url": "/index.html",
   "shortcuts": []
 }
