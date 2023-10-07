@@ -8,21 +8,17 @@
   <title>Football Arretado</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <meta name="theme-color" content="#ffffff"/>
-
-
-  <!-- Favicons -->
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="apple-touch-icon" href="/assets/img/appstore.png">
   <link href="assets/img/icon_footballl.png" rel="icon">
   <link rel="manifest" href="manifest.json">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Template Main CSS Files -->
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
@@ -335,16 +331,25 @@
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('service-worker.js').then(function (registration) {
-          console.log('Service Worker registrado com sucesso:', registration);
-        }).catch(function (error) {
-          console.log('Erro ao registrar o Service Worker:', error);
-        });
-      });
-    }
+  <script type="module">
+    // This is the "Offline copy of pages" service worker
+
+    const CACHE = "pwabuilder-offline";
+
+    importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+    self.addEventListener("message", (event) => {
+      if (event.data && event.data.type === "SKIP_WAITING") {
+        self.skipWaiting();
+      }
+    });
+
+    workbox.routing.registerRoute(
+      new RegExp('/*'),
+      new workbox.strategies.StaleWhileRevalidate({
+        cacheName: CACHE
+      })
+    );
   </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>

@@ -7,26 +7,22 @@
   "orientation": "any",
   "scope": "/",
   "short_name": "Football",
-  "start_url": "/index.html",
+  "start_url": "/",
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
   "icons": [
     {
-      "src": "assets/img/maskable_icon.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
-    },
-    {
       "src": "assets/img/icon_footballl.png",
       "type": "image/png",
       "sizes": "1024x1004"
     },
+    
     {
       "src": "assets/img/playstore.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     },
     {
       "src": "assets/img/appstore.png",
